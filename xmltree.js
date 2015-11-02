@@ -89,7 +89,7 @@ XMLTree.prototype.actOnXML = function(xml) {
   this.xml = this.parseXML(xml);
   var childnodes = this.xml.children;
   //start delving. Since JS seems to add another, outer root element, our (real) root it is child			
-  //console.log(this.xml);
+
 
   if (childnodes)
     var map = this.delve(childnodes, 0);
@@ -109,7 +109,7 @@ XMLTree.prototype.recurchild = function(kids) {
 
     if (countchildren.length == 0) {
 
-      ///console.log("reached bottom");
+      ///reached the bottom node
 
     } else {
 
@@ -119,11 +119,10 @@ XMLTree.prototype.recurchild = function(kids) {
 
     }
 
-    ///childElementCount
+
 
   }
 
-  ///console.log(childarray);
   return childarray;
 
 }
